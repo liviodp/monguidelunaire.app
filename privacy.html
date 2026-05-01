@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialit&eacute; — Mon Guide Lunaire</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #0d0d14;
+            color: #e0e0e0;
+            line-height: 1.7;
+            padding: 2rem 1.25rem;
+        }
+        .container { max-width: 680px; margin: 0 auto; }
+        nav { margin-bottom: 2rem; font-size: 0.9rem; }
+        nav a { color: #8b7ec8; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        h1 {
+            color: #fff;
+            font-size: 1.75rem;
+            margin-bottom: 0.25rem;
+        }
+        .date {
+            color: #888;
+            font-size: 0.85rem;
+            margin-bottom: 2.5rem;
+        }
+        h2 {
+            color: #8b7ec8;
+            font-size: 1.15rem;
+            margin-top: 2.25rem;
+            margin-bottom: 0.75rem;
+        }
+        p, li { margin-bottom: 0.6rem; }
+        ul { padding-left: 1.25rem; }
+        a { color: #8b7ec8; }
+        strong { color: #f0f0f0; }
+        .highlight {
+            background: rgba(139, 126, 200, 0.1);
+            border-left: 3px solid #8b7ec8;
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            text-align: left;
+            padding: 0.5rem 0.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.95rem;
+        }
+        th { color: #8b7ec8; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav><a href="cgu.html">Conditions G&eacute;n&eacute;rales d&rsquo;Utilisation &rarr;</a></nav>
+
+        <h1>Politique de Confidentialit&eacute;</h1>
+        <p class="date">Date d&rsquo;entr&eacute;e en vigueur : 1er mai 2026</p>
+
+        <p>
+            Mon Guide Lunaire est une application de bien-&ecirc;tre lunaire. Ta vie priv&eacute;e compte &eacute;norm&eacute;ment pour nous. Cette politique explique quelles donn&eacute;es sont collect&eacute;es, pourquoi, et comment elles sont prot&eacute;g&eacute;es.
+        </p>
+
+        <!-- 1 -->
+        <h2>1. Responsable du traitement</h2>
+        <p>
+            L&rsquo;application Mon Guide Lunaire est &eacute;dit&eacute;e par un d&eacute;veloppeur ind&eacute;pendant.<br>
+            Contact : <a href="mailto:monguidelunaire@gmail.com">monguidelunaire@gmail.com</a>
+        </p>
+
+        <!-- 2 -->
+        <h2>2. Donn&eacute;es stock&eacute;es localement sur ton appareil</h2>
+        <p>Les donn&eacute;es suivantes restent exclusivement sur ton iPhone et ne sont <strong>jamais transmises</strong> &agrave; un serveur :</p>
+        <ul>
+            <li>Date de naissance</li>
+            <li>Entr&eacute;es de journal (texte libre)</li>
+            <li>Historique des guidances re&ccedil;ues</li>
+            <li>Pr&eacute;f&eacute;rences de notification</li>
+            <li>Donn&eacute;es de localisation (utilis&eacute;es uniquement pour calculer les horaires de lever et coucher de lune, jamais envoy&eacute;es &agrave; un serveur)</li>
+        </ul>
+
+        <!-- 3 -->
+        <h2>3. Donn&eacute;es transmises &agrave; des tiers</h2>
+
+        <h3 style="color:#f0f0f0; font-size:1rem; margin-top:1.25rem; margin-bottom:0.5rem;">a) G&eacute;n&eacute;ration de guidances par IA</h3>
+        <p>
+            Pour cr&eacute;er tes guidances personnalis&eacute;es, l&rsquo;app envoie certaines informations &agrave; un proxy Cloudflare Worker, qui transmet la requ&ecirc;te au mod&egrave;le d&rsquo;intelligence artificielle Claude Haiku (Anthropic). Les donn&eacute;es envoy&eacute;es sont :
+        </p>
+        <ul>
+            <li>Ton pr&eacute;nom</li>
+            <li>Ton signe solaire (d&eacute;riv&eacute; de ta date de naissance &mdash; la date elle-m&ecirc;me n&rsquo;est <strong>pas</strong> transmise)</li>
+            <li>Ton statut amoureux (c&eacute;libataire, en couple, etc.)</li>
+            <li>Tes centres d&rsquo;int&eacute;r&ecirc;t s&eacute;lectionn&eacute;s (maximum 4)</li>
+            <li>Un identifiant d&rsquo;appareil anonyme (utilis&eacute; uniquement pour le contr&ocirc;le du nombre de requ&ecirc;tes)</li>
+            <li>La phase lunaire et le signe lunaire du jour (donn&eacute;es astronomiques, pas personnelles)</li>
+        </ul>
+        <div class="highlight">
+            Ces donn&eacute;es sont utilis&eacute;es uniquement pour g&eacute;n&eacute;rer ta guidance du jour. Elles ne sont pas stock&eacute;es de mani&egrave;re permanente par le proxy ni par Anthropic au-del&agrave; du traitement de la requ&ecirc;te.
+        </div>
+
+        <h3 style="color:#f0f0f0; font-size:1rem; margin-top:1.25rem; margin-bottom:0.5rem;">b) Analytics &mdash; TelemetryDeck</h3>
+        <p>
+            L&rsquo;app utilise <strong>TelemetryDeck</strong> pour des statistiques d&rsquo;utilisation anonymes (ex. : &laquo;&nbsp;l&rsquo;app a &eacute;t&eacute; ouverte&nbsp;&raquo;, &laquo;&nbsp;le paywall a &eacute;t&eacute; affich&eacute;&nbsp;&raquo;). TelemetryDeck est conforme au RGPD par conception : aucun cookie, aucun fingerprinting, aucune donn&eacute;e personnelle. Seuls des noms d&rsquo;&eacute;v&eacute;nements sont collect&eacute;s.
+        </p>
+
+        <h3 style="color:#f0f0f0; font-size:1rem; margin-top:1.25rem; margin-bottom:0.5rem;">c) Abonnements &mdash; RevenueCat</h3>
+        <p>
+            La gestion des abonnements est assur&eacute;e par <strong>RevenueCat</strong>. RevenueCat re&ccedil;oit les donn&eacute;es d&rsquo;achat g&eacute;r&eacute;es par Apple (StoreKit) et le statut d&rsquo;abonnement (premium ou gratuit). Aucune donn&eacute;e personnelle suppl&eacute;mentaire ne lui est transmise.
+        </p>
+
+        <!-- 4 -->
+        <h2>4. Finalit&eacute;s du traitement</h2>
+        <table>
+            <tr><th>Donn&eacute;e</th><th>Finalit&eacute;</th></tr>
+            <tr><td>Pr&eacute;nom, signe, statut, int&eacute;r&ecirc;ts</td><td>Personnaliser les guidances IA</td></tr>
+            <tr><td>Identifiant d&rsquo;appareil</td><td>Limiter le nombre de requ&ecirc;tes (rate limiting)</td></tr>
+            <tr><td>&Eacute;v&eacute;nements anonymes</td><td>Am&eacute;liorer l&rsquo;app (analytics)</td></tr>
+            <tr><td>Donn&eacute;es d&rsquo;achat</td><td>G&eacute;rer ton abonnement</td></tr>
+            <tr><td>Localisation (locale)</td><td>Calculer les horaires lunaires</td></tr>
+        </table>
+
+        <!-- 5 -->
+        <h2>5. Ce que l&rsquo;app ne fait pas</h2>
+        <ul>
+            <li>Pas de tracking publicitaire ni cross-app (pas d&rsquo;IDFA, pas d&rsquo;ATT)</li>
+            <li>Pas de partage de donn&eacute;es avec des annonceurs</li>
+            <li>Pas de vente de donn&eacute;es personnelles</li>
+            <li>Pas de cr&eacute;ation de profil publicitaire</li>
+            <li>Pas de collecte de donn&eacute;es de sant&eacute;</li>
+        </ul>
+
+        <!-- 6 -->
+        <h2>6. Dur&eacute;e de conservation</h2>
+        <ul>
+            <li><strong>Donn&eacute;es locales</strong> : conserv&eacute;es tant que l&rsquo;app est install&eacute;e. Supprim&eacute;es &agrave; la d&eacute;sinstallation.</li>
+            <li><strong>Guidances en cache</strong> : conserv&eacute;es localement pendant 30 jours maximum.</li>
+            <li><strong>Donn&eacute;es transmises au proxy IA</strong> : utilis&eacute;es uniquement le temps de g&eacute;n&eacute;rer la r&eacute;ponse, puis non conserv&eacute;es.</li>
+            <li><strong>Analytics TelemetryDeck</strong> : selon la politique de conservation de TelemetryDeck (donn&eacute;es agr&eacute;g&eacute;es et anonymes).</li>
+            <li><strong>RevenueCat</strong> : selon la dur&eacute;e n&eacute;cessaire &agrave; la gestion de ton abonnement.</li>
+        </ul>
+
+        <!-- 7 -->
+        <h2>7. Tes droits (RGPD)</h2>
+        <p>Conform&eacute;ment au R&egrave;glement G&eacute;n&eacute;ral sur la Protection des Donn&eacute;es, tu disposes des droits suivants :</p>
+        <ul>
+            <li><strong>Acc&egrave;s</strong> &mdash; obtenir une copie des donn&eacute;es te concernant</li>
+            <li><strong>Rectification</strong> &mdash; corriger des donn&eacute;es inexactes</li>
+            <li><strong>Suppression</strong> &mdash; demander l&rsquo;effacement de tes donn&eacute;es</li>
+            <li><strong>Portabilit&eacute;</strong> &mdash; recevoir tes donn&eacute;es dans un format structur&eacute;</li>
+            <li><strong>Opposition</strong> &mdash; t&rsquo;opposer au traitement de tes donn&eacute;es</li>
+            <li><strong>Limitation</strong> &mdash; demander la limitation du traitement</li>
+        </ul>
+        <p>
+            Pour exercer ces droits, contacte-nous &agrave; <a href="mailto:monguidelunaire@gmail.com">monguidelunaire@gmail.com</a>. Nous r&eacute;pondrons dans un d&eacute;lai de 30 jours.
+        </p>
+        <p>
+            Tu peux &eacute;galement introduire une r&eacute;clamation aupr&egrave;s de la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>), l&rsquo;autorit&eacute; fran&ccedil;aise de protection des donn&eacute;es.
+        </p>
+
+        <!-- 8 -->
+        <h2>8. S&eacute;curit&eacute;</h2>
+        <p>
+            L&rsquo;app ne stocke aucune cl&eacute; API sur ton appareil. Les communications avec le proxy Cloudflare sont chiffr&eacute;es via HTTPS. Les donn&eacute;es locales sont prot&eacute;g&eacute;es par le chiffrement natif d&rsquo;iOS.
+        </p>
+
+        <!-- 9 -->
+        <h2>9. Modifications de cette politique</h2>
+        <p>
+            Cette politique peut &ecirc;tre mise &agrave; jour. En cas de changement significatif, tu seras inform&eacute;e via l&rsquo;application. La date en haut de cette page indique la derni&egrave;re mise &agrave; jour.
+        </p>
+
+        <!-- 10 -->
+        <h2>10. Contact</h2>
+        <p>
+            Pour toute question concernant cette politique ou tes donn&eacute;es personnelles :<br>
+            <a href="mailto:monguidelunaire@gmail.com">monguidelunaire@gmail.com</a>
+        </p>
+
+        <p style="margin-top:3rem; color:#666; font-size:0.8rem; text-align:center;">
+            &copy; 2026 Mon Guide Lunaire
+        </p>
+    </div>
+</body>
+</html>
